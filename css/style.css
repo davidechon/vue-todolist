@@ -1,0 +1,141 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body{
+    background-color: #f6f8f9;
+}
+
+/* Button */
+.button {
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.blue {
+    background-color: #47acf1;
+    color: white;
+}
+.grey {
+    border: 1px solid #e9ecee;
+    color: #e9ecee;
+}
+  
+/* Check Uncheck */
+.bullet {
+    color: green;
+    border: 1px solid green;
+    borer-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.check{
+    border: 1px solid #67c1ab;
+    color: #67c1ab;
+    border-radius: 50%;
+}
+.cross{
+    border: 1px solid #eb5851;
+    border-radius: 50%;
+    color: #eb5851;
+}
+
+/* Categorie */
+.category{
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.editorial{
+    background-color: #47acf1;
+    color: white;
+}
+.goals{
+    background-color: #9c72e4;
+    color: white;
+}
+.recruiting{
+    background-color: #64c0a9;
+    color: white;
+}
+.mobile{
+    background-color: #f29e33;
+    color: white;
+}
+.website{
+    background-color: #d863a1;
+    color: white;
+}
+.sales{
+    background-color: #b0c925;
+    color: white;
+}
+
+/* Header */
+header{
+    background-color: #fff;
+    height: 75px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+header > img {
+    margin: 5px;
+    display:inline-block;
+    vertical-align: middle;
+}
+.big-text {
+    font-size: 40px;
+    font-weight: bold;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+/* Main */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* Navbar */
+.navbar{
+   border-bottom: 2px solid #f6f8f9;
+   width: 100%;
+   height: 70px;
+   padding: 10px 50px;
+}
+
+/* Task */
+.task {
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+}
+.title-task {
+    font-size: 20px;
+    font-weight: bold;
+}
+.task ul li{
+    list-style-type: none;
+    margin: 15px 0;
+}
