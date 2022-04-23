@@ -30,7 +30,6 @@ body{
     border: 1px solid #e9ecee;
     color: #e9ecee;
 }
-  
 /* Check Uncheck */
 .bullet {
     color: green;
@@ -138,4 +137,7 @@ header > img {
 .task ul li{
     list-style-type: none;
     margin: 15px 0;
+}
+.cursor{
+    cursor: pointer;
 }
