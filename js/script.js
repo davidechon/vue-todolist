@@ -22,48 +22,103 @@
 // [x] 3. Milestone 1 => A. Stampo la lista in pagina
 // [x] 4. Milestone 1 => B. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato
 // [x] 5. Milestone 2 => Aggiungo una "x" ad ogni item per rimuoverlo dalla lista
-// [_] 6. Milestone 3 => A. Aggiungo un campo di input testuale
-// [_] 7. Milestone 3 => B. Aggiungo un pulsante "aggiungi"
+// [x] 6. Milestone 3 => A. Aggiungo un campo di input testuale
+// [x] 7. Milestone 3 => B. Aggiungo un pulsante "aggiungi"
 // [_] 8. Milestone 3 => C. cliccando sul pulsante 3.B, il testo digitato viene letto e utilizzato per creare un nuovo todo
 // [_] 9. Milestone 3 => D. Aggiungo 3.C alla lista dei todo esistenti
 // [_] 10. Bonus 1 => Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // [x] 11. Bonus 2 => cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
 /////////////////////////////
-const todoApp = new Vue({
+// const todoApp = new Vue({
+//   el: '#todoApp',
+//   data: {
+//     attivitaItems: [
+//       {
+//         text: "stringa di testo del todo",
+//         done: false,
+//       },
+//       {
+//         text: "seconda stringa di testo del todo",
+//         done: false,
+//       },
+//       {
+//         text: "terza stringa di testo del todo",
+//         done: false,
+//       },
+//     ],
+//     nuovaAttivita : '',
+//   },
+//   methods: {
+
+//     aggiungi() {
+//       const attivita = {
+//         done: false,
+//         text: this.nuovaAttivita,
+//       }
+//       this.attivitaItems.push(nuovaAttivita)
+//       console.log(nuovaAttivita)
+
+//     },
+
+//     rimuovi(i) {
+//       this.attivitaItems.splice(i, 1)
+//     }
+
+//   }
+
+// })
+
+
+///// Check Esercizio ////////////////////////////////////////////
+const toodolist = new Vue({
   el: '#todoApp',
   data: {
-    lista: [
+    attivitaItems: [
       {
-        text: "stringa di testo del todo",
-        done: false,
+        id: 1,
+        check: false,
+        nomeAttivita: 'mascarpone',
       },
       {
-        text: "seconda stringa di testo del todo",
-        done: true,
+        id: 2,
+        check: false,
+        nomeAttivita: 'uova',
       },
       {
-        text: "terza stringa di testo del todo",
-        done: true,
+        id: 3,
+        check: false,
+        nomeAttivita: 'caffè',
+      },
+      {
+        id: 4,
+        check: false,
+        nomeAttivita: 'cacao',
+      },
+      {
+        id: 5,
+        check: false,
+        nomeAttivita: 'zucchero',
+      },
+      {
+        id: 6,
+        check: false,
+        nomeAttivita: 'marsala',
       },
     ],
-    newText: '',
+    nuovaAttivita: '',
+
   },
   methods: {
     aggiungi() {
       const attivita = {
-        done: false,
-        text: this.newText,
+        check: false,
+        nomeAttivita: this.nuovaAttivita,
       }
-      this.lista.push(newText)
+      this.attivitaItems.push(attivita)
     },
     rimuovi(i) {
-      this.lista.splice(i, 1)
+      this.attivitaItems.splice(i,1)
     }
-
-
-  }
-
+  },
 })
-
-

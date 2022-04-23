@@ -53,46 +53,88 @@
         </div>
     </main> -->
 
-    <div id="todoApp">
-        <div class="input-group">
-            <button
-                @click="aggiungi"
-                class="btn btn-outline-success"
-                type="button"
-            >
-            Aggiungi attività
-            </button>
-            <div class="input-group-text" id="btn-Add"> + </div>
-            <input type="text" class="form-control" placeholder="Inserisci nuova attivit&agrave;" aria-label="Input group example" aria-describedby="btnGroupAddon">
-            <div class="input-group-text" id="btn-Minus"> - </div>
-            <button
-                @click="rimuovi"
-                class="btn btn-outline-danger"
-                type="button"
-            >
-            Rimuovi attività
-            </button>
-        </div>
-        
+    <!-- <div id="todoApp">
+         <div class="container">
+            <div class="input-group">
+                <button
+                    @click="aggiungi"
+                    class="btn btn-outline-success"
+                    type="button"
+                >
+                Aggiungi attività
+                </button>
+                <div class="input-group-text" id="btn-Add"> + </div>
+                <input v-model="nuovaAttivita" type="text" class="form-control" placeholder="Inserisci nuova attivit&agrave;" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                <div class="input-group-text" id="btn-Minus"> - </div>
+                <button
+                    @click="rimuovi"
+                    class="btn btn-outline-danger"
+                    type="button"
+                >
+                Rimuovi attività
+                </button>
+            </div>
+            <ul>
+                <li v-if="attivitaItems.length === 0">Non ci sono attività da svolgere</li>
+                <li  
+                class="cursor"
+                :class="{'text-decoration-line-through': attivita.done}" 
+                v-for="(attivita, index) in attivitaItems"
+                >
+                <button>
+                    <i @click="aggiungi" class="fa-solid fa-circle-plus"></i>
+                </button>
 
-        <ul>
-            <li v-if="lista.length=== 0">Non ci sono attività da svolgere</li>
-            <li  
-            class="cursor"
-            :class="{'text-decoration-line-through': attivita.done}" 
-            v-for="(attivita, index) in lista"
-            >
-            <span @click="attivita.done = !attivita.done">
-                {{attivita.text}}
-            </span>
+                <span @click="attivita.done = !attivita.done">
+                    {{attivita.text}}
+                </span>
+                    
                 
-            <button>
-                <i @click="rimuovi(index)" class="fa-solid fa-xmark"></i>
-            </button>
+                <button>
+                    <i @click="rimuovi(index)" class="fa-solid fa-circle-xmark"></i>
+                </button>
+                </li>
+                
+            </ul>
+        </div> /container 
+    </div>  -->
+
+    <!-- Check esercizio ---------------------------------------------------->
+    <div id="todoApp">
+        <ul>
+            <li v-if="attivitaItems.lenght === 0"> 
+                Tutte le attività completate!</li>
+            <li 
+            class="cursor"
+            :class="{'text-decoration-line-through': attivita.check}"
+            v-for="(attivita, index) in attivitaItems"           
+            >
+                <span @click="attivita.check = !attivita.check">
+                    {{attivita.nomeAttivita}}
+                </span>
+                <button>
+                    <i @click="rimuovi(index)" class="fa-solid fa-xmark"></i>
+                </button>
             </li>
-            
         </ul>
+        <div class="input-group mb-3">
+            <input
+             type="text"
+             class="form-control"
+             placeholder="Inserisci attività"
+             v-model="nuovaAttivita"
+             @keyup.enter="aggiungi"
+             />
+             <button
+             @click="aggiungi"
+             class="btn btn-outline-success"
+             type="button"
+             >Aggiungi attivita</button>
+        </div>
     </div>
+
+    <!-- /Check esercizio ---------------------------------------------------->
+    
     
     
     <script src="js/script.js"></script>
