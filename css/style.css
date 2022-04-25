@@ -34,7 +34,7 @@ body{
 .bullet {
     color: green;
     border: 1px solid green;
-    borer-radius: 50%;
+    border-radius: 50%;
     width: 20px;
     height: 20px;
     display: inline-block;

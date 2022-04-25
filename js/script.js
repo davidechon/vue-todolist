@@ -24,9 +24,9 @@
 // [x] 5. Milestone 2 => Aggiungo una "x" ad ogni item per rimuoverlo dalla lista
 // [x] 6. Milestone 3 => A. Aggiungo un campo di input testuale
 // [x] 7. Milestone 3 => B. Aggiungo un pulsante "aggiungi"
-// [_] 8. Milestone 3 => C. cliccando sul pulsante 3.B, il testo digitato viene letto e utilizzato per creare un nuovo todo
-// [_] 9. Milestone 3 => D. Aggiungo 3.C alla lista dei todo esistenti
-// [_] 10. Bonus 1 => Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
+// [x] 8. Milestone 3 => C. cliccando sul pulsante 3.B, il testo digitato viene letto e utilizzato per creare un nuovo todo
+// [x] 9. Milestone 3 => D. Aggiungo 3.C alla lista dei todo esistenti
+// [x] 10. Bonus 1 => Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // [x] 11. Bonus 2 => cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
 /////////////////////////////
@@ -78,32 +78,33 @@ const toodolist = new Vue({
       {
         id: 1,
         check: false,
-        nomeAttivita: 'mascarpone',
+        nomeAttivita: 'Quarterly Newsletter',
+        category: 'Editorial',
       },
       {
         id: 2,
         check: false,
-        nomeAttivita: 'uova',
+        nomeAttivita: 'Recruiting blog post',
       },
       {
         id: 3,
         check: false,
-        nomeAttivita: 'caffè',
+        nomeAttivita: 'Mobile app launch',
       },
       {
         id: 4,
         check: false,
-        nomeAttivita: 'cacao',
+        nomeAttivita: 'Interview John H.',
       },
       {
         id: 5,
         check: false,
-        nomeAttivita: 'zucchero',
+        nomeAttivita: 'Summit update to mobile storefonts',
       },
       {
         id: 6,
         check: false,
-        nomeAttivita: 'marsala',
+        nomeAttivita: 'Schedule meeting with Alex',
       },
     ],
     nuovaAttivita: '',
@@ -118,7 +119,11 @@ const toodolist = new Vue({
       this.attivitaItems.push(attivita)
     },
     rimuovi(i) {
-      this.attivitaItems.splice(i,1)
+      this.attivitaItems.splice(i, 1)
     }
+
+
   },
+
+  
 })

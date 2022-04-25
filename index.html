@@ -22,36 +22,66 @@
     </header>
     <!-- Fine header -->
     <!-- Inizio main -->
-    <!-- <main class="container">
-        <div class="navbar">
-            <div class="button blue">Add Task</div>
-            <div class="button grey">Add Section</div>
+    <main class="container">
+        <div id="todoApp">
+            <div class="navbar">
+                <div class="input-group mb3">
+                    <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Aggiungi Task"
+                    v-model="nuovaAttivita"
+                    @keyup.enter="aggiungi"
+                    />
+                
+                    <button
+                        @click="aggiungi"
+                        class="btn btn-outline-success"
+                        type="button"
+                        >Aggiungi Task
+                    </button>
+                </div>
+                <!-- <div class="button grey">Add Section</div> -->
+            </div>
+            <div class="task">
+                <ul>
+                    <span class="title-task">&#9662; New Task</span>  
+                    <li class="cursor"
+                        :class="{'text-decoration-line-through': attivita.check}"
+                        v-for="(attivita, index) in attivitaItems"> 
+                        <span class="bullet check">&check;</span> 
+                        <span @click="attivita.check = !attivita.check">
+                            {{attivita.nomeAttivita}}
+                        </span>
+                        <!-- <span class="category editorial">Editorial</span> -->
+
+                        <button>
+                            <i @click="rimuovi(index)" class="bullet cross fa-solid fa-circle-xmark"></i>
+                        </button>
+                        
+                        </li>
+                </ul>
+            </div>
+            <!-- <div class="task">
+                <ul>
+                    <span class="title-task">&#9662; Today</span> 
+                    <li> <span class="bullet check">&check;</span> Recruiting blog post <span class="category editorial">Editorial</span></li>
+                    <li> <span class="bullet check">&check;</span> Mobile app launch <span class="category goals">Q1 Goals</span></li>
+                    <li> <span class="bullet cross">&cross;</span> Interview John H. <span class="category recruiting"> Recruiting</span></li>
+                    <li> <span class="bullet check">&check;</span> Summit update to mobile storefonts <span class="category mobile"> Mobile</span></li>
+                </ul>
+            </div> -->
+            <!-- <div class="task">
+                <ul>
+                    <span class="title-task">&#9662; Upcoming</span> 
+                    <li> <span class="bullet cross">&cross;</span> Schedule meeting with Alex</li>
+                    <li> <span class="bullet check">&check;</span> Homepage refresh <span class="category website">Website</span></li>
+                    <li> <span class="bullet check">&check;</span> Onboard new Sales team members <span class="category sales">Sales</span></li>
+                    <li> <span class="bullet check">&check;</span >Review editorial calendar <span class="category editorial">Editorial</span></li>
+                </ul>
+            </div> -->
         </div>
-        <div class="task">
-            <ul>
-                <span class="title-task">&#9662; New Task</span>  
-                <li> <span class="bullet check">&check;</span> Quarterly Newsletter <span class="category editorial">Editorial</span></li>
-            </ul>
-        </div>
-        <div class="task">
-            <ul>
-                <span class="title-task">&#9662; Today</span> 
-                <li> <span class="bullet check">&check;</span> Recruiting blog post <span class="category editorial">Editorial</span></li>
-                <li> <span class="bullet check">&check;</span> Mobile app launch <span class="category goals">Q1 Goals</span></li>
-                <li> <span class="bullet cross">&cross;</span> Interview John H. <span class="category recruiting"> Recruiting</span></li>
-                <li> <span class="bullet check">&check;</span> Summit update to mobile storefonts <span class="category mobile"> Mobile</span></li>
-            </ul>
-        </div>
-        <div class="task">
-            <ul>
-                <span class="title-task">&#9662; Upcoming</span> 
-                <li> <span class="bullet cross">&cross;</span> Schedule meeting with Alex</li>
-                <li> <span class="bullet check">&check;</span> Homepage refresh <span class="category website">Website</span></li>
-                <li> <span class="bullet check">&check;</span> Onboard new Sales team members <span class="category sales">Sales</span></li>
-                <li> <span class="bullet check">&check;</span >Review editorial calendar <span class="category editorial">Editorial</span></li>
-            </ul>
-        </div>
-    </main> -->
+    </main>
 
     <!-- <div id="todoApp">
          <div class="container">
@@ -100,6 +130,7 @@
     </div>  -->
 
     <!-- Check esercizio ---------------------------------------------------->
+    <!-- <div class="container">
     <div id="todoApp">
         <ul>
             <li v-if="attivitaItems.lenght === 0"> 
@@ -113,11 +144,11 @@
                     {{attivita.nomeAttivita}}
                 </span>
                 <button>
-                    <i @click="rimuovi(index)" class="fa-solid fa-xmark"></i>
+                    <i @click="rimuovi(index)" class="fa-solid fa-circle-xmark"></i>
                 </button>
             </li>
-        </ul>
-        <div class="input-group mb-3">
+        </ul> -->
+        <!-- <div class="input-group mb-3">
             <input
              type="text"
              class="form-control"
@@ -130,12 +161,25 @@
              class="btn btn-outline-success"
              type="button"
              >Aggiungi attivita</button>
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
 
     <!-- /Check esercizio ---------------------------------------------------->
-    
-    
+    <!-- Note per l'esercizio --------------------------------------------------
+    Prima converti il layout del vecchio esercizio in modo da dargli un senso.
+    Poi si potrebbe aggiungere un array che vada a salvare le attività completate
+    e si potrebbe aggiungere la modalità che visualizza (tipo con un bottn radio)
+    le attività in sospeso
+    le attività completate
+    tutte le attività
+
+    Migliora l'aspetto dell'addAttivita
+
+    Sarebbe bello poter aggiungere le attivita direttamente dalla casella di input
+    tipo, mentre digiti un'attivita se gia presente ti compare come suggerimento
+    e quindi poterlo aggiungere senza ridigitare nuovamente -->
+   
+       
     
     <script src="js/script.js"></script>
 </body>
