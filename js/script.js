@@ -80,6 +80,9 @@ const toodolist = new Vue({
     },
     rimuovi(i) {
       this.attivitaItems.splice(i, 1)
+    },
+    capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
 
