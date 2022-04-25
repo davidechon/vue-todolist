@@ -29,48 +29,7 @@
 // [x] 10. Bonus 1 => Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // [x] 11. Bonus 2 => cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
-/////////////////////////////
-// const todoApp = new Vue({
-//   el: '#todoApp',
-//   data: {
-//     attivitaItems: [
-//       {
-//         text: "stringa di testo del todo",
-//         done: false,
-//       },
-//       {
-//         text: "seconda stringa di testo del todo",
-//         done: false,
-//       },
-//       {
-//         text: "terza stringa di testo del todo",
-//         done: false,
-//       },
-//     ],
-//     nuovaAttivita : '',
-//   },
-//   methods: {
-
-//     aggiungi() {
-//       const attivita = {
-//         done: false,
-//         text: this.nuovaAttivita,
-//       }
-//       this.attivitaItems.push(nuovaAttivita)
-//       console.log(nuovaAttivita)
-
-//     },
-
-//     rimuovi(i) {
-//       this.attivitaItems.splice(i, 1)
-//     }
-
-//   }
-
-// })
-
-
-///// Check Esercizio ////////////////////////////////////////////
+///////////////////////////////////////////////
 const toodolist = new Vue({
   el: '#todoApp',
   data: {

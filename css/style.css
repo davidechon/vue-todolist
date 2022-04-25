@@ -43,12 +43,12 @@ body{
     vertical-align: middle;
 }
 .check{
-    border: 1px solid #67c1ab;
+    /* border: 1px solid #67c1ab; */
     color: #67c1ab;
     border-radius: 50%;
 }
 .cross{
-    border: 1px solid #eb5851;
+    /* border: 1px solid #eb5851; */
     border-radius: 50%;
     color: #eb5851;
 }
