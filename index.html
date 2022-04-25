@@ -45,28 +45,34 @@
             </div>
             <div class="task">
                 <ul>
-                    <span class="title-task">&#9662; New Task</span>  
+                    <span class="task-title">&#9662; New Task</span>  
                     <li class="cursor"
                         :class="{'text-decoration-line-through': attivita.check}"
                         v-for="(attivita, index) in attivitaItems"> 
-                        <span>
+
+                        <span @click="attivita.check = !attivita.check" class="" :class="attivita.check ? 'complete' : ''">
+                            {{attivita.check ? '&#9989;' : '&#11093;'}}
+                            <!-- {{attivita.check ? "<i class="cross fa-regular fa-circle-xmark"></i>" : '<i @click="rimuovi(index)" class="cross fa-regular fa-circle-check"></i>'}} -->
+                        </span>
+                        
+                        <!-- <span>
                             <i class="check fa-regular fa-circle-check"></i>
-                        </span> 
-                        <span @click="attivita.check = !attivita.check">
-                            {{attivita.nomeAttivita}}
+                        </span>  -->
+                        <span class="task-text" @click="attivita.check = !attivita.check">
+                            {{capitalize(attivita.nomeAttivita)}}
                         </span>
                         <!-- <span class="category editorial">Editorial</span> -->
-
                         <span>
                             <i @click="rimuovi(index)" class="cross fa-regular fa-circle-xmark"></i>
                         </span>
                         
-                        </li>
+                    </li>
                 </ul>
+                <h3 class="check" v-if="attivitaItems.length == 0">Nessuna attività da completare!</h3>
             </div>
             <!-- <div class="task">
                 <ul>
-                    <span class="title-task">&#9662; Today</span> 
+                    <span class="task-title">&#9662; Today</span> 
                     <li> <span class="bullet check">&check;</span> Recruiting blog post <span class="category editorial">Editorial</span></li>
                     <li> <span class="bullet check">&check;</span> Mobile app launch <span class="category goals">Q1 Goals</span></li>
                     <li> <span class="bullet cross">&cross;</span> Interview John H. <span class="category recruiting"> Recruiting</span></li>
@@ -75,7 +81,7 @@
             </div> -->
             <!-- <div class="task">
                 <ul>
-                    <span class="title-task">&#9662; Upcoming</span> 
+                    <span class="task-title">&#9662; Upcoming</span> 
                     <li> <span class="bullet cross">&cross;</span> Schedule meeting with Alex</li>
                     <li> <span class="bullet check">&check;</span> Homepage refresh <span class="category website">Website</span></li>
                     <li> <span class="bullet check">&check;</span> Onboard new Sales team members <span class="category sales">Sales</span></li>
