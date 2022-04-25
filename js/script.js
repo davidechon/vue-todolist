@@ -75,7 +75,8 @@ const toodolist = new Vue({
         check: false,
         nomeAttivita: this.nuovaAttivita,
       }
-      this.attivitaItems.push(attivita)
+      this.attivitaItems.push(attivita),
+      this.nuovaAttivita = ''
     },
     rimuovi(i) {
       this.attivitaItems.splice(i, 1)

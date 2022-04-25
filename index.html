@@ -30,14 +30,14 @@
                     type="text"
                     class="form-control"
                     placeholder="Aggiungi Task"
+                    aria-label="Aggiungi Task"
                     v-model="nuovaAttivita"
                     @keyup.enter="aggiungi"
                     />
-                
                     <button
-                        @click="aggiungi"
                         class="btn btn-outline-success"
                         type="button"
+                        @click="aggiungi"
                         >Aggiungi Task
                     </button>
                 </div>
